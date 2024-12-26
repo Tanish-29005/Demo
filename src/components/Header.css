@@ -1,0 +1,135 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.logo h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.bar {
+  background-color: #333;
+  width: 25px;
+  height: 3px;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.signin-btn,
+.signup-btn {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.signin-btn {
+  background-color: #f6f9fc;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  border: solid 1px black;
+}
+
+.signup-btn {
+  background-color: #000000;
+  color: white;
+  border-radius: 5px;
+}
+
+.signin-btn:hover,
+.signup-btn:hover {
+  opacity: 0.8;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  /* Adjust nav-links to be visible */
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    z-index: 10; /* Ensure the nav links are above other content */
+    background-color: rgba(255, 255, 255, 0.95); /* Add transparency */
+    max-height: 500px;
+    height: auto;
+  }
+
+  /* Add visibility for active state */
+  .nav-active {
+    display: flex;
+    max-height: 300px; /* Adjust based on number of links */
+  }
+
+  .nav-link {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    background-color: lightgray; /* Temporary color for visibility */
+  }
+
+  /* Adjust buttons layout for mobile */
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; /* Ensure buttons take full width */
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Ensure Sign Up button is not hidden */
+  .signin-btn,
+  .signup-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px; /* Add spacing between buttons */
+  }
+}

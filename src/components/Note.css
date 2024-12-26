@@ -1,0 +1,115 @@
+/* Default styles for Note component */
+.note {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.bg-img {
+  background-image: url("https://media.istockphoto.com/id/1060352206/photo/donate-food-to-hungry-people-concept-of-poverty-and-hunger.jpg?s=612x612&w=0&k=20&c=BB37IPajPeKo8fsJ3m7z2TOUmCbD0nnJo79ZXBg89sM=");
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Make the background image cover the full height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Ensure content is centered perfectly */
+.hero-content {
+  color: white;
+  max-width: 90%; /* Restrict width to avoid overflow */
+  position: relative;
+  z-index: 2;
+  margin-bottom: 30%;
+  margin-right: 10%;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.heroDonate-btn,
+.heroRegister-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #000201;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 150px;
+}
+
+.heroDonate-btn:hover,
+.heroRegister-btn:hover {
+  background-color: #218838;
+}
+
+.info-section {
+  padding: 20px;
+  margin-left: 5%;
+}
+
+.help-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.help-option {
+  flex: 1 1 calc(33.333% - 20px);
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Media Query for devices with a width of 768px or less */
+@media (max-width: 768px) {
+  .note {
+    padding: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem; /* Smaller text size for mobile */
+  }
+
+  .hero-content p {
+    font-size: 1rem; /* Smaller text size for mobile */
+  }
+
+  .heroDonate-btn,
+  .heroRegister-btn {
+    width: 100%; /* Make buttons take full width on small screens */
+    margin: 10px 0;
+    min-width: 100%; /* Ensure no minimum width constraint */
+  }
+
+  .info-section h2 {
+    font-size: 1.5rem; /* Adjust heading size for mobile */
+  }
+
+  .help-options {
+    display: block; /* Stack help options vertically */
+    gap: 15px;
+  }
+
+  .help-option {
+    flex: 1 1 100%; /* Ensure each help option takes full width */
+  }
+}
